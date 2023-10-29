@@ -20,12 +20,14 @@ To use this repo:
 
 9- Run the "yarn start"
 
-10- Once you get the files from Google Apps Script, you can rename the Code.js to start.js and add this code.
+10- Once you get the files from Google Apps Script, create the start.js file in the apps-script folder and copy this code.
 
 function doGet () {
 return HtmlService.createTemplateFromFile('dist/index')
 .evaluate()
 .addMetaTag('viewport', 'width=device-width, initial-scale=1')
 }
+
+11- Run the "yarn run gpush"
 
 Note: This project only works for the Frontend, you have to create an API in another project with GAS and consume it as an API rest
