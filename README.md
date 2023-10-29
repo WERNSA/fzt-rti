@@ -6,28 +6,20 @@ To use this repo:
 
 2- Change the name "script-name" in the packege.json for the name of the project.
 
-3- Execute "yarn run gcreate"
+3- Execute "yarn gcreate"
 
 4- Select project type "standalone"
 
 5- Move the file .clasp.json to the main directory
 
-6- Excute "yarn run gpush"
+6- Excute "yarn gpush"
 
 7- Go to the script.google.com and make the webapp deployment. (Now you can open the developtment address)
 
-8- Execute "yarn run gpull" to merge the change of the appscript file.
+8- Execute "yarn gpull" to merge the change of the appscript file.
 
-9- Run the "yarn start"
+9- Run the "yarn dev"
 
-10- Once you get the files from Google Apps Script, create the start.js file in the apps-script folder and copy this code.
-
-function doGet () {
-return HtmlService.createTemplateFromFile('dist/index')
-.evaluate()
-.addMetaTag('viewport', 'width=device-width, initial-scale=1')
-}
-
-11- Run the "yarn run gpush"
+10- To build the index for GAS use "yarn build" and later "yarn push"
 
 Note: This project only works for the Frontend, you have to create an API in another project with GAS and consume it as an API rest
