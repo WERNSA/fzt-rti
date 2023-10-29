@@ -4,7 +4,7 @@ To use this repo:
 
 1- run "yarn install"
 
-2- Change the name piar-react-gas in the packege.json for the name of the project.
+2- Change the name "script-name" in the packege.json for the name of the project.
 
 3- Execute "yarn run gcreate"
 

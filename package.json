@@ -6,7 +6,7 @@
   "scripts": {
     "glogin": "clasp login",
     "glogout": "clasp logout",
-    "gcreate": "clasp create --title 'piar-gas-vite' --rootDir ./apps-script",
+    "gcreate": "clasp create --title 'script-name' --rootDir ./apps-script",
     "gpull": "clasp pull",
     "gpush": "clasp push",
     "gstart": "clasp push --watch",
