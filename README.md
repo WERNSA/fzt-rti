@@ -20,6 +20,6 @@ To use this repo:
 
 9- Run the "yarn dev"
 
-10- To build the index for GAS use "yarn build" and later "yarn push"
+10- To build the index for GAS use "yarn build" and later "yarn gpush"
 
 Note: This project only works for the Frontend, you have to create an API in another project with GAS and consume it as an API rest
