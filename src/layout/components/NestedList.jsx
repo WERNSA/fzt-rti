@@ -7,6 +7,11 @@ import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Proptypes from 'prop-types'
+
+const propTypes = {
+  listData: Proptypes.array.isRequired
+}
 
 function NestedList({ listData }) {
   const [open, setOpen] = useState({})
@@ -41,5 +46,7 @@ function NestedList({ listData }) {
     </List>
   )
 }
+
+NestedList.propTypes = propTypes
 
 export default NestedList

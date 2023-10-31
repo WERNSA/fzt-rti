@@ -10,6 +10,13 @@ import { DrawerHeader } from '../MainLayout'
 import { navLinks } from '../../routes/Routes'
 import NestedList from './NestedList'
 import { Container } from '@mui/material'
+import PropTypes from 'prop-types'
+
+const propTypes = {
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired
+}
+
 const drawerWidth = 240
 
 const openedMixin = (theme) => ({
@@ -82,5 +89,7 @@ function NavListDrawer({ open, setOpen }) {
     </>
   )
 }
+
+NavListDrawer.propTypes = propTypes
 
 export default NavListDrawer

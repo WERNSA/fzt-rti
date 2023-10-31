@@ -5,27 +5,60 @@ import SchoolIcon from '@mui/icons-material/School'
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import BuildIcon from '@mui/icons-material/Build'
+import AddBeneficiary from '../beneficiaries/AddBeneficiary'
 
 export const navLinks = [
   {
-    name: 'Agregar Usuario',
+    name: 'Beneficiarios',
     icon: <SchoolIcon />,
-    path: '/add-user',
-    pl: 2
+    pl: 2,
+    children: [
+      {
+        name: 'Crear',
+        icon: <DirectionsCarIcon />,
+        path: '/add-user',
+        pl: 4
+      },
+      {
+        name: 'Ver',
+        icon: <AddCircleOutlineIcon />,
+        pl: 4,
+        children: [
+          {
+            name: 'Visita 1',
+            path: '/pedagogy/visits/planning',
+            icon: <AddCircleOutlineIcon />,
+            pl: 6
+          },
+          {
+            name: 'Visita 2',
+            path: '/pedagogy/visits/planning',
+            icon: <AddCircleOutlineIcon />,
+            pl: 6
+          },
+          {
+            name: 'Visita 3',
+            path: '/pedagogy/visits/planning',
+            icon: <AddCircleOutlineIcon />,
+            pl: 6
+          }
+        ]
+      }
+    ]
   },
   {
-    name: 'Tecnología',
+    name: 'Cursos',
     icon: <HandymanIcon />,
     pl: 2,
     children: [
       {
-        name: 'Visitas',
+        name: 'Crear',
         path: '/technology/visits',
         icon: <BuildIcon />,
         pl: 4
       },
       {
-        name: 'Planificación',
+        name: 'Ver',
         path: '/technology/visits/planning',
         icon: <AddCircleOutlineIcon />,
         pl: 4
@@ -41,8 +74,8 @@ const router = createBrowserRouter([
     errorElement: <MainLayout />,
     children: [
       {
-        path: '/pedagogy/visits',
-        element: <MainLayout />
+        path: '/add-user',
+        element: <AddBeneficiary />
       },
       {
         path: '/technology/visits',
