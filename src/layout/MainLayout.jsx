@@ -46,18 +46,18 @@ function MainLayout() {
     setOpen(!open)
   }
 
-  useEffect(() => {
-    axios
-      .get(
-        'https://script.google.com/macros/s/AKfycbwjwOlaTaAq8E63UXYvoDpeY5Dqg5FFF4_9cmQZCSKyqvymphgCf8B9Jfp56xSiQ-8RHw/exec'
-      )
-      .then((res) => {
-        console.log(res.data)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }, [])
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       'https://script.google.com/macros/s/AKfycbwjwOlaTaAq8E63UXYvoDpeY5Dqg5FFF4_9cmQZCSKyqvymphgCf8B9Jfp56xSiQ-8RHw/exec'
+  //     )
+  //     .then((res) => {
+  //       console.log(res.data)
+  //     })
+  //     .catch((err) => {
+  //       console.log(err)
+  //     })
+  // }, [])
 
   return (
     <>
@@ -78,7 +78,7 @@ function MainLayout() {
               <MenuIcon />
             </IconButton>
             <Typography variant='h6' noWrap component='div'>
-              FZT PIAR SYSTEM
+              RTI System
             </Typography>
           </Toolbar>
         </AppBar>
